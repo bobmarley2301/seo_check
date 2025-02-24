@@ -865,20 +865,32 @@
       });
     </script>
 
-    <!-- JavaScript for Menu -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar");
         const menuButton = document.getElementById("menu-button");
         const menuIcon = document.getElementById("menu-icon");
         const closeIcon = document.getElementById("close-icon");
         const closeMenu = document.getElementById("close-menu");
-        const menu = document.getElementById("mobile-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
         const menuContent = document.getElementById("menu-content");
 
+        navbar.style.transition = "background-color 0.3s ease, color 0.3s ease";
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add("bg-white", "text-black", "shadow-md");
+            navbar.classList.remove("bg-[#174441]", "text-white");
+          } else {
+            navbar.classList.remove("bg-white", "text-black", "shadow-md");
+            navbar.classList.add("bg-[#174441]", "text-white");
+          }
+        });
+
         function openMenu() {
-          menu.classList.remove("hidden");
+          mobileMenu.classList.remove("hidden");
           setTimeout(() => {
-            menu.classList.add("bg-opacity-50");
+            mobileMenu.classList.add("bg-opacity-50");
             menuContent.classList.remove("-translate-x-full");
           }, 10);
           menuIcon.classList.add("hidden");
@@ -886,10 +898,10 @@
         }
 
         function closeMobileMenu() {
-          menu.classList.remove("bg-opacity-50");
+          mobileMenu.classList.remove("bg-opacity-50");
           menuContent.classList.add("-translate-x-full");
           setTimeout(() => {
-            menu.classList.add("hidden");
+            mobileMenu.classList.add("hidden");
           }, 300);
           menuIcon.classList.remove("hidden");
           closeIcon.classList.add("hidden");
@@ -898,8 +910,8 @@
         menuButton.addEventListener("click", openMenu);
         closeMenu.addEventListener("click", closeMobileMenu);
 
-        menu.addEventListener("click", (event) => {
-          if (event.target === menu) {
+        mobileMenu.addEventListener("click", (event) => {
+          if (event.target === mobileMenu) {
             closeMobileMenu();
           }
         });
