@@ -120,33 +120,35 @@
       class="fixed inset-0 bg-opacity-30 backdrop-blur-md z-20 hidden transition-opacity duration-300"
     >
       <div
-      id="menu-content"
-      class="w-64 bg-[#174441] text-white h-full p-6 fixed top-0 left-0 transform -translate-x-full transition-transform duration-300 shadow-lg"
+        id="menu-content"
+        class="w-64 bg-[#174441] text-white h-full p-6 fixed top-0 left-0 transform -translate-x-full transition-transform duration-300 shadow-lg"
       >
-      <button id="close-menu" class="absolute top-4 right-4 text-4xl">
-        <i class="fas fa-times"></i>
-      </button>
+        <button id="close-menu" class="absolute top-4 right-4 text-4xl">
+          <i class="fas fa-times"></i>
+        </button>
 
-      <nav class="mt-6 space-y-4 text-lg font-medium">
-        <a href="#" class="block py-2 hover:text-[#E88B22]">Головна</a>
-        <a href="#course-unique" class="block py-2 hover:text-[#E88B22]"
-        >Чому ми?</a
-        >
-        <a href="#course-program" class="block py-2 hover:text-[#E88B22]">Програма</a>
-        <a href="#who-is-this-for" class="block py-2 hover:text-[#E88B22]"
-        >Переваги</a
-        >
-        <a href="#faq" class="block py-2 hover:text-[#E88B22]">FAQ</a>
-        <a
-        href="#price"
-        class="bg-[#E88B22] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#b7691a] transition-transform transform hover:scale-105 transition-colors duration-300"
-        >
-        Записатись
-        </a>
-      </nav>
+        <nav class="mt-6 space-y-4 text-lg font-medium">
+          <a href="#" class="block py-2 hover:text-[#E88B22]">Головна</a>
+          <a href="#course-unique" class="block py-2 hover:text-[#E88B22]"
+            >Чому ми?</a
+          >
+          <a href="#course-program" class="block py-2 hover:text-[#E88B22]"
+            >Програма</a
+          >
+          <a href="#who-is-this-for" class="block py-2 hover:text-[#E88B22]"
+            >Переваги</a
+          >
+          <a href="#faq" class="block py-2 hover:text-[#E88B22]">FAQ</a>
+          <a
+            href="#price"
+            class="bg-[#E88B22] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#b7691a] transition-transform transform hover:scale-105 transition-colors duration-300"
+          >
+            Записатись
+          </a>
+        </nav>
 
-      <!-- Нижня лінія -->
-      <div class="border-b-2 border-[#E88B22] my-6"></div>
+        <!-- Нижня лінія -->
+        <div class="border-b-2 border-[#E88B22] my-6"></div>
       </div>
     </aside>
 
@@ -194,7 +196,7 @@
         Що робить курс
         <span class="text-[#E88B22] text-4xl underline">унікальним</span>?
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white relative">
         <!-- Перевага 1 -->
         <div data-aos="fade-up" data-aos-delay="100">
           <div
@@ -231,7 +233,12 @@
             Шаблони документів, чек-листи та практичні приклади.
           </p>
         </div>
+      </div>
 
+      <!-- Останні дві картки у вигляді піраміди -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 text-white mt-8 md:w-2/3 mx-auto"
+      >
         <!-- Перевага 4 -->
         <div data-aos="fade-up" data-aos-delay="400">
           <div
